@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>ניר אברהמוף והניוקי</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="%20ariel.png" alt="לוגו אוניברסיטת אריאל" class="logo-img">
+      <span>Ariel News</span>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#">חדשות</a></li>
+        <li><a href="#">סטודנטים</a></li>
+        <li><a href="#">מזון</a></li>
+        <li><a href="#">אקדמיה</a></li>
+        <li><a href="#">דעות</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <article class="news-article">
+      <h1 class="main-title">ניר אברהמוף חשף: "ניסו להרעיל אותי עם ניוקי"</h1>
+
+      <h2 class="subtitle">
+        סיפר ניר כי שבוע שעבר סיון, חברתו לספסל הלימודים או מי שלפחות החשיב כחברתו, ניסתה להרעיל אותו באמצעות ניוקי שהוגש לו בארוחת ערב אחרי רובוטיקה. לדבריו, היא הציעה ארוחת ערב תמימה,
+        <strong>"ומה אני, חשדניסט? לא חשדתי."</strong>
+      </h2>
+
+      <div class="meta">
+        <span>Bullshit Division</span> |
+        <span>14.11.25</span> |
+        <span>11:54</span>
+      </div>
+
+      <img src="nioki.png" alt="סיוון והניוקי" class="main-image">
+      <div class="caption">סיון מחייכת מעל סיר הניוקי (רגע לפני? 🤔)</div>
+
+      <p>
+        "שמנו לב לריכוז חומרים כימיים רעילים שלא אמורים להימצא בצלחת סטודנט רגיל", אמרו תומר וארד שנכחו באירוע.
+      </p>
+
+      <p><strong>17 תגובות</strong></p>
+
+      <div class="comments-section">
+  <h3>תגובות:</h3>
+
+  <div class="comment">
+    <strong>ארד אברהמי:</strong> גם לי היא שמה משהו בערק והקאתי כל הלילה
+  </div>
+  <div class="comment">
+    <strong>עמית יוסף:</strong> מאז שהיא הקיאה בפורים היא רוצה להפיל את כולם שיקיאו!
+  </div>
+  <div class="comment">
+    <strong>אלה אדמוני:</strong> תיזהרו ממנה!!!
+  </div>
+  <div class="comment">
+    <strong>תומר מאירוביץ:</strong> היא כמו דבורה מיד עוקצת (;
+  </div>
+
+  <h4>הוספת תגובה חדשה:</h4>
+  <textarea id="commentInput" placeholder="כתוב כאן תגובה..."></textarea><br>
+  <button onclick="addComment()">שלח תגובה</button>
+
+  <div id="new-comments"></div>
+</div>
+
+      <div class="tags">
+        תגיות:
+        <a href="#">הרעלה</a>,
+        <a href="#">הנדסה תעשייה וניהול</a>,
+        <a href="#">ניוקי</a>,
+        <a href="#">סיון מקיאה</a>
+      </div>
+    </article>
+  </main>
+
+  <footer>
+    <p>© 2025 - כל הזכויות שמורות ל-Ariel News | נבנה במסגרת קורס מערכות מידע - שנה ג'</p>
+  </footer>
+
+<script>
+  function addComment() {
+    const input = document.getElementById("commentInput");
+    const text = input.value.trim();
+
+    if (text !== "") {
+      const newComment = document.createElement("div");
+      newComment.className = "comment";
+      newComment.innerHTML = `<strong>מגיב אנונימי:</strong> ${text}`;
+      document.getElementById("new-comments").appendChild(newComment);
+      input.value = "";
+    }
+  }
+</script>
+
+</body>
+</html>
+
+

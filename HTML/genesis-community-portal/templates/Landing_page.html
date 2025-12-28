@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Genesis Accelerator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: radial-gradient(circle at top, #141826, #0b0e17);
+      color: #ffffff;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 40px 20px 80px;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .logo {
+      height: 48px;
+      margin-bottom: 20px;
+    }
+
+    .hero {
+      text-align: center;
+      margin-bottom: 80px;
+    }
+
+    .hero h1 {
+      font-size: 46px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #cfd3ff;
+      max-width: 820px;
+      margin: auto;
+      line-height: 1.6;
+    }
+
+    .image-section {
+      margin: 80px 0;
+      text-align: center;
+    }
+
+    .image-section img {
+      width: 100%;
+      max-width: 900px;
+      border-radius: 18px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    }
+
+    section {
+      margin-bottom: 70px;
+    }
+
+    h2 {
+      font-size: 30px;
+      margin-bottom: 18px;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    ul li {
+      margin-bottom: 12px;
+      font-size: 16px;
+      color: #e5e7ff;
+    }
+
+    .highlight {
+      color: #8b5cf6;
+      font-weight: bold;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #111428;
+      border-radius: 14px;
+      padding: 24px;
+      box-shadow: 0 0 0 1px rgba(255,255,255,0.05);
+    }
+
+    .footer-cta {
+      text-align: center;
+      margin-top: 90px;
+    }
+
+    .cta-btn {
+      padding: 14px 34px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #fff;
+      background: linear-gradient(90deg, #6a7cff, #8b5cf6);
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .cta-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(138,92,246,0.4);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="header">
+      <img src="{{ url_for('static', filename='png/genesis_logo.png') }}" class="logo" alt="Genesis Logo">
+    </div>
+
+    <div class="hero">
+      <h1>Genesis Accelerator</h1>
+      <p>
+        Scale & Enter the U.S. Market The Right Way<br><br>
+        Genesis Accelerator is a <span class="highlight">3-month, no-equity program</span>
+        designed for post-MVP startups that are ready to sharpen their U.S. go-to-market,
+        build repeatable growth systems, and reach meaningful traction.
+      </p>
+    </div>
+
+    <div class="image-section">
+      <img src="{{ url_for('static', filename='png/startupsvibe.JPEG') }}" alt="Genesis Community">
+    </div>
+
+    <section>
+      <h2>Who It's For</h2>
+      <p>
+        Built for <span class="highlight">Pre-Seed and Seed stage startups</span>
+        with a working product, early revenue, pilots, or strong market validation.
+      </p>
+      <p>
+        We focus on teams that are execution-driven and serious about U.S. expansion.
+      </p>
+    </section>
+
+    <section>
+      <h2>What You'll Learn</h2>
+      <div class="cards">
+        <div class="card">Building repeatable GTM and sales systems</div>
+        <div class="card">U.S. ICP definition and outbound strategy</div>
+        <div class="card">Hiring, compliance, and cross-border operations</div>
+        <div class="card">90-day U.S. launch roadmap and mock board sessions</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>What You'll Get</h2>
+      <ul>
+        <li>Direct access to <span class="highlight">100+ VCs and mentors</span></li>
+        <li>Hands-on mentorship from experienced founders and operators</li>
+        <li>Startup credits from leading global tech partners</li>
+        <li>Long-term access to the Genesis founder community</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Why Genesis</h2>
+      <p>
+        Tech accounts for more than half of Israel’s exports.
+        Genesis exists to help exceptional teams turn strong technology
+        into scalable, revenue-driven U.S. businesses.
+      </p>
+    </section>
+
+    <div class="footer-cta">
+      <h2>Scale globally & enter the U.S. with confidence</h2>
+      <button class="cta-btn" onclick="window.location.href='{{ url_for('apply') }}'">
+        Let’s Go
+      </button>
+    </div>
+
+  </div>
+</body>
+</html>
