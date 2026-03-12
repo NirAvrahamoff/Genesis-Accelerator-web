@@ -1,330 +1,520 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Genesis Accelerator - Apply</title>
 
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin:0;
-      background:#0e1015;
-      color:#fff;
-    }
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 
-    .wrap {
-      max-width: 980px;
-      margin: 0 auto;
-      padding: 28px 20px;
-    }
+<title>Genesis Accelerator - Apply</title>
 
-    .card {
-      background:#11131a;
-      border:1px solid #22263a;
-      border-radius:16px;
-      padding:22px;
-    }
+<style>
 
-    a { color:#bfc4ff; text-decoration:none; }
+.logo-header{
+position:absolute;
+top:20px;
+left:20px;
+}
 
-    h1 { margin: 8px 0 18px 0; }
+.logo-header img{
+height:50px;
+}
 
-    h3 { margin-top:22px; }
+body{
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial;
+margin:0;
+background:#f6f8fb;
+color:#1e293b;
+}
 
-    label {
-      display:block;
-      margin-top:14px;
-      font-weight: bold;
-    }
+.wrap{
+max-width:980px;
+margin:auto;
+padding:40px 20px;
+}
 
-    .req { color:#ff7a7a; }
+.card{
+background:white;
+border:1px solid #e2e8f0;
+border-radius:16px;
+padding:28px;
+box-shadow:0 10px 25px rgba(0,0,0,0.06);
+}
 
-    input, select, textarea {
-      width:100%;
-      margin-top:8px;
-      padding:10px 12px;
-      background:#0f1220;
-      border:1px solid #2a2f4a;
-      border-radius:10px;
-      color:#fff;
-      box-sizing:border-box;
-    }
+a{
+color:#6366f1;
+text-decoration:none;
+font-weight:600;
+}
 
-    textarea {
-      min-height: 110px;
-      resize: vertical;
-    }
+a:hover{
+text-decoration:underline;
+}
 
-    .row {
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:14px;
-    }
+h1{
+margin:10px 0 20px;
+color:#111827;
+}
 
-    @media (max-width: 800px){
-      .row{ grid-template-columns:1fr; }
-    }
+h3{
+margin-top:25px;
+color:#111827;
+}
 
-    /* ---------- Checkbox layout ---------- */
+label{
+display:block;
+margin-top:14px;
+font-weight:600;
+}
 
-    .checkbox-grid {
-      display:grid;
-      grid-template-columns:1fr;
-      gap:10px;
-      margin-top:10px;
-    }
+.req{
+color:#ef4444;
+}
 
-    @media (min-width:700px){
-      .checkbox-grid {
-        grid-template-columns:1fr 1fr;
-      }
-    }
+input, textarea{
 
-    .check-row {
-      display:flex;
-      justify-content:space-between;
-      align-items:flex-start;
-      gap:14px;
-      background:#0f1220;
-      border:1px solid #2a2f4a;
-      border-radius:10px;
-      padding:10px 12px;
-      font-weight:normal;
-    }
+width:100%;
+margin-top:8px;
+padding:11px 13px;
 
-    .check-row span {
-      line-height:1.4;
-    }
+background:#f9fafb;
+border:1px solid #e2e8f0;
+border-radius:10px;
 
-    .check-row input[type="checkbox"] {
-      margin-top:2px;
-      width:18px;
-      height:18px;
-      flex-shrink:0;
-    }
+font-size:15px;
+box-sizing:border-box;
 
-    /* ---------- Buttons ---------- */
+transition:all .15s;
 
-    .btn {
-      display:inline-block;
-      margin-top:22px;
-      padding:12px 22px;
-      border-radius:12px;
-      font-weight:bold;
-      border:0;
-      cursor:pointer;
-    }
+}
 
-    .btn-primary {
-      background:#6c63ff;
-      color:#fff;
-    }
-  </style>
+/* תיקון גודל dropdown */
+
+select{
+
+width:100%;
+margin-top:8px;
+
+height:36px;
+padding:6px 10px;
+
+background:#f9fafb;
+border:1px solid #e2e8f0;
+border-radius:10px;
+
+font-size:14px;
+
+box-sizing:border-box;
+
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+
+outline:none;
+border-color:#6366f1;
+box-shadow:0 0 0 2px rgba(99,102,241,0.15);
+
+}
+
+textarea{
+min-height:110px;
+resize:vertical;
+}
+
+.row{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:16px;
+}
+
+@media(max-width:800px){
+.row{grid-template-columns:1fr;}
+}
+
+
+/* ----------- checkbox grid ----------- */
+
+.checkbox-grid{
+display:grid;
+grid-template-columns:1fr;
+gap:10px;
+margin-top:10px;
+}
+
+@media(min-width:700px){
+.checkbox-grid{
+grid-template-columns:1fr 1fr;
+}
+}
+
+.check-row{
+
+display:flex;
+justify-content:space-between;
+align-items:flex-start;
+
+gap:14px;
+
+background:#f9fafb;
+border:1px solid #e2e8f0;
+
+border-radius:10px;
+padding:10px 12px;
+
+font-weight:normal;
+
+}
+
+.check-row span{
+line-height:1.4;
+}
+
+.check-row input[type="checkbox"]{
+margin-top:2px;
+width:18px;
+height:18px;
+flex-shrink:0;
+}
+
+
+/* ----------- submit button ----------- */
+
+.btn{
+
+display:inline-block;
+margin-top:24px;
+
+padding:14px 28px;
+
+border-radius:30px;
+font-weight:600;
+font-size:15px;
+
+border:none;
+cursor:pointer;
+
+background:linear-gradient(90deg,#6366f1,#8b5cf6);
+color:white;
+
+transition:all .2s;
+
+}
+
+.btn:hover{
+
+transform:translateY(-2px);
+box-shadow:0 8px 18px rgba(99,102,241,0.35);
+
+}
+
+.btn:active{
+transform:translateY(0);
+}
+
+</style>
 </head>
 
 <body>
+
+<div class="logo-header">
+
+<img src="/static/png/genesis_logo.png" class="logo"></div>
+
 <div class="wrap">
-  <a href="{{ url_for('landing') }}">← Back</a>
 
-  <div class="card">
+<a href="{{ url_for('landing') }}">← Back</a>
 
-    <h1>Genesis Accelerator Application Form</h1>
+<div class="card">
 
-    <form action="{{ url_for('submit') }}" method="post">
+<h1>Genesis Accelerator Application Form</h1>
 
-      <!-- Basic details -->
-      <div class="row">
-        <div>
-          <label>Full Name <span class="req">*</span></label>
-          <input name="full_name" required>
-        </div>
-        <div>
-          <label>Email <span class="req">*</span></label>
-          <input name="email" type="email" required>
-        </div>
-      </div>
-
-      <div class="row">
-        <div>
-          <label>LinkedIn <span class="req">*</span></label>
-          <input name="linkedin" required>
-        </div>
-        <div>
-          <label>Phone Number <span class="req">*</span></label>
-          <input name="phone" required>
-        </div>
-      </div>
-
-      <div class="row">
-        <div>
-          <label>What's your role in the company? <span class="req">*</span></label>
-          <input name="role_in_company" required>
-        </div>
-        <div>
-          <label>Company Name <span class="req">*</span></label>
-          <input name="company_name" required>
-        </div>
-      </div>
-
-      <!-- Gain from program -->
-      <h3>What do you hope to gain from the program? <span class="req">*</span></h3>
-
-      <div class="checkbox-grid">
-        <label class="check-row"><span>Mentoring</span><input type="checkbox" name="gain[]" value="Mentoring"></label>
-        <label class="check-row"><span>Access to Customers or Design Partners</span><input type="checkbox" name="gain[]" value="Customers"></label>
-        <label class="check-row"><span>Access to Investors / Fundraising support</span><input type="checkbox" name="gain[]" value="Investors"></label>
-        <label class="check-row"><span>Educational content on company-building</span><input type="checkbox" name="gain[]" value="Education"></label>
-        <label class="check-row"><span>Networking with fellow founders</span><input type="checkbox" name="gain[]" value="Networking"></label>
-        <label class="check-row"><span>Technical Support</span><input type="checkbox" name="gain[]" value="Tech"></label>
-        <label class="check-row"><span>Other</span><input type="checkbox" name="gain[]" value="Other"></label>
-      </div>
-
-      <!-- Startup details -->
-      <div class="row">
-        <div>
-          <label>Startup sector</label>
-          <select name="primary_sector">
-            <option value="">Select sector</option>
-            <option value="AI">AI</option>
-            <option value="Artificial Intelligence">Artificial Intelligence</option>
-            <option value="FinTech">FinTech</option>
-            <option value="Cyber">Cyber</option>
-            <option value="Cybersecurity">Cybersecurity</option>
-            <option value="Health">Health</option>
-            <option value="HealthTech">HealthTech</option>
-            <option value="Climate">Climate</option>
-            <option value="Energy">Energy</option>
-            <option value="Renewable Energy">Renewable Energy</option>
-            <option value="E-commerce">E-commerce</option>
-            <option value="Retail">Retail</option>
-            <option value="SaaS">SaaS</option>
-            <option value="Software">Software</option>
-            <option value="PropTech">PropTech</option>
-            <option value="Real Estate">Real Estate</option>
-            <option value="Automotive">Automotive</option>
-            <option value="Industrial">Industrial</option>
-            <option value="Robotics">Robotics</option>
-            <option value="Data">Data</option>
-            <option value="Cloud">Cloud</option>
-            <option value="Mobile">Mobile</option>
-            <option value="Security">Security</option>
-            <option value="Payments">Payments</option>
-            <option value="Quantum">Quantum</option>
-          </select>
-        </div>
-      </div>
+<form action="{{ url_for('submit') }}" method="post">
 
 
-        <div>
-          <label>Startup stage</label>
-          <select name="startup_stage" required>
-            <option value="">Select stage</option>
-            <option value="Ideation">Ideation</option>
-            <option value="Pre-Seed">Pre-Seed</option>
-            <option value="Seed">Seed</option>
-            <option value="Early revenue">Early revenue</option>
-            <option value="Another">Another</option>
-          </select>
-        </div>
-       </div>
+<div class="row">
 
-      <div class="row">
-        <div>
-          <label>Co-founders count</label>
-          <select name="cofounders_count" required>
-            <option value="">Select</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">More than 2</option>
-          </select>
-        </div>
-
-        <div>
-          <label>How long have you been working on your Startup?</label>
-          <select name="time_working_on_startup" required>
-            <option value="">Select</option>
-            <option value="lt_3">Less than 3 months</option>
-            <option value="3_6">3–6 months</option>
-            <option value="6_24">6 months – 2 years</option>
-            <option value="gt_24">More than 2 years</option>
-          </select>
-        </div>
-      </div>
-
-      <label>Co-founders details</label>
-      <textarea name="cofounders_details"></textarea>
-
-      <label>When was the company founded?</label>
-      <input type="date" name="company_founded_date"  min="2000-01-01" max="{{ today }}">
-
-      <label>Startup description</label>
-      <textarea name="startup_description"></textarea>
-
-      <label>What makes your team unique?</label>
-      <textarea name="team_unique"></textarea>
-
-      <label>Who are your current customers?</label>
-      <textarea name="current_customers"></textarea>
-
-      <label>What are your goals for the next 6 months?</label>
-      <textarea name="goals_next_6_months"></textarea>
-
-
-     <div class="row">
-      <div>
-        <label>Have you raised any funding so far?</label>
-        <select name="raised_funding">
-          <option value="">Select</option>
-          <option value="Yes">Yes</option>
-          <option value="No">No</option>
-        </select>
-      </div>
-
-      <div>
-        <label>Revenue over the past year</label>
-        <select name="revenue_past_year">
-          <option value="">Select</option>
-          <option value="none">No revenue yet</option>
-          <option value="lt_50k">Less than $50k</option>
-          <option value="50_250k">$50k–$250k</option>
-          <option value="250k_1m">$250k–$1M</option>
-          <option value="gt_1m">$1M+</option>
-        </select>
-      </div>
-    </div>
-
-    <label>From whom?</label>
-    <input name="funding_from_whom">
-
-
-
-      <label>Website</label>
-      <input name="website_link">
-
-      <label>Have you participated in an accelerator before?</label>
-      <input name="participated_accelerator">
-
-      <label>How did you hear about us?</label>
-      <input name="heard_about_us">
-
-      <label>Additional information</label>
-      <textarea name="additional_info"></textarea>
-
-      <!-- Consent -->
-      <label style="margin-top:22px;">Consent</label>
-      <label class="check-row">
-        <span>
-          I agree that the personal information I provide will be collected and stored by Genesis Accelerator
-          <span class="req">*</span>
-        </span>
-        <input type="checkbox" name="consent_accepted" required>
-      </label>
-
-      <button class="btn btn-primary" type="submit">Submit</button>
-
-    </form>
-  </div>
+<div>
+<label>Full Name <span class="req">*</span></label>
+<input name="full_name" required>
 </div>
+
+<div>
+<label>Email <span class="req">*</span></label>
+<input name="email" type="email" required>
+</div>
+
+</div>
+
+
+<div class="row">
+
+<div>
+<label>LinkedIn <span class="req">*</span></label>
+<input name="linkedin" required>
+</div>
+
+<div>
+<label>Phone Number <span class="req">*</span></label>
+<input name="phone" required>
+</div>
+
+</div>
+
+
+<div class="row">
+
+<div>
+<label>What's your role in the company? <span class="req">*</span></label>
+<input name="role_in_company" required>
+</div>
+
+<div>
+<label>Company Name <span class="req">*</span></label>
+<input name="company_name" required>
+</div>
+
+</div>
+
+
+<h3>What do you hope to gain from the program? <span class="req">*</span></h3>
+
+<div class="checkbox-grid">
+
+<label class="check-row">
+<span>Mentoring</span>
+<input type="checkbox" name="gain[]" value="Mentoring">
+</label>
+
+<label class="check-row">
+<span>Access to Customers or Design Partners</span>
+<input type="checkbox" name="gain[]" value="Customers">
+</label>
+
+<label class="check-row">
+<span>Access to Investors / Fundraising support</span>
+<input type="checkbox" name="gain[]" value="Investors">
+</label>
+
+<label class="check-row">
+<span>Educational content on company-building</span>
+<input type="checkbox" name="gain[]" value="Education">
+</label>
+
+<label class="check-row">
+<span>Networking with fellow founders</span>
+<input type="checkbox" name="gain[]" value="Networking">
+</label>
+
+<label class="check-row">
+<span>Technical Support</span>
+<input type="checkbox" name="gain[]" value="Tech">
+</label>
+
+<label class="check-row">
+<span>Other</span>
+<input type="checkbox" name="gain[]" value="Other">
+</label>
+
+</div>
+
+
+
+<div class="row">
+
+<div>
+<label>Startup sector</label>
+
+<select name="primary_sector">
+
+<option value="" disabled selected hidden>Select sector</option>
+<option>AI</option>
+<option>FinTech</option>
+<option>Cyber</option>
+<option>HealthTech</option>
+<option>SaaS</option>
+<option>Cloud</option>
+<option>Robotics</option>
+<option>Data</option>
+
+</select>
+
+</div>
+
+
+<div>
+<label>Startup stage</label>
+
+<select name="startup_stage" required>
+
+<option value="" disabled selected hidden>Select stage</option>
+<option>Ideation</option>
+<option>Pre-Seed</option>
+<option>Seed</option>
+<option>Early revenue</option>
+
+</select>
+
+</div>
+
+</div>
+
+
+
+<div class="row">
+
+<div>
+
+<label>Co-founders count</label>
+
+<select name="cofounders_count" required>
+
+<option value="" disabled selected hidden>Select</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">More than 2</option>
+
+</select>
+
+</div>
+
+
+<div>
+
+<label>How long have you been working on your Startup?</label>
+
+<select name="time_working_on_startup" required>
+
+<option value="" disabled selected hidden>Select</option>
+<option value="lt_3">Less than 3 months</option>
+<option value="3_6">3–6 months</option>
+<option value="6_24">6 months – 2 years</option>
+<option value="gt_24">More than 2 years</option>
+
+</select>
+
+</div>
+
+</div>
+
+
+
+<label>Co-founders details</label>
+<textarea name="cofounders_details"></textarea>
+
+
+
+<label>When was the company founded?</label>
+
+<input
+type="date"
+name="company_founded_date"
+min="2000-01-01"
+max="{{ today }}"
+>
+
+
+
+<label>Startup description</label>
+<textarea name="startup_description"></textarea>
+
+
+<label>What makes your team unique?</label>
+<textarea name="team_unique"></textarea>
+
+
+<label>Who are your current customers?</label>
+<textarea name="current_customers"></textarea>
+
+
+<label>What are your goals for the next 6 months?</label>
+<textarea name="goals_next_6_months"></textarea>
+
+
+
+<div class="row">
+
+<div>
+
+<label>Have you raised any funding so far?</label>
+
+<select name="raised_funding">
+
+<option value="" disabled selected hidden>Select</option>
+<option value="Yes">Yes</option>
+<option value="No">No</option>
+
+</select>
+
+</div>
+
+
+<div>
+
+<label>Revenue over the past year</label>
+
+<select name="revenue_past_year">
+
+<option value="" disabled selected hidden>Select</option>
+<option value="none">No revenue yet</option>
+<option value="lt_50k">Less than $50k</option>
+<option value="50_250k">$50k–$250k</option>
+<option value="250k_1m">$250k–$1M</option>
+<option value="gt_1m">$1M+</option>
+
+</select>
+
+</div>
+
+</div>
+
+
+
+<label>From whom?</label>
+<input name="funding_from_whom">
+
+
+
+<label>Website</label>
+<input name="website_link">
+
+
+<label>Have you participated in an accelerator before?</label>
+<input name="participated_accelerator">
+
+
+<label>How did you hear about us?</label>
+<input name="heard_about_us">
+
+
+<label>Additional information</label>
+<textarea name="additional_info"></textarea>
+
+
+
+<label style="margin-top:22px;">Consent</label>
+
+<label class="check-row">
+
+<span>
+I agree that the personal information I provide will be collected and stored by Genesis Accelerator
+<span class="req">*</span>
+</span>
+
+<input type="checkbox" name="consent_accepted" required>
+
+</label>
+
+
+
+<button class="btn" type="submit">
+Submit Application
+</button>
+
+
+</form>
+</div>
+</div>
+
 </body>
 </html>
