@@ -16,16 +16,16 @@ The system includes:
 # Live Demo
 
 Landing Page  
-https://genesisaccelerator-web-h9aq.onrender.com/
+https://genesis-accelerator-web-l51s.onrender.com/
 
 Application Form  
-https://genesisaccelerator-web-h9aq.onrender.com/apply
+https://genesis-accelerator-web-l51s.onrender.com/apply
 
 Submission Confirmation  
-https://genesisaccelerator-web-h9aq.onrender.com/approval
+https://genesis-accelerator-web-l51s.onrender.com/approval
 
 Admin Dashboard  
-https://genesisaccelerator-web-h9aq.onrender.com/admin
+https://genesis-accelerator-web-l51s.onrender.com/admin
 
 ---
 
